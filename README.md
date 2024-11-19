@@ -1,12 +1,12 @@
 # ImperialDuty Script
 
-The **ImperialDuty** script is a critical component of the *Imperial CAD* system, designed to manage duty statuses and equipment within the game. This script allows users to toggle their on-duty status with a simple `/duty` command, automatically integrating this status into the CAD system and other dependent scripts, such as **Imperial911**. It also equips users with predefined weapons configured within the script settings, enhancing the gameplay experience for role-play scenarios.
+The **ImperialDuty** script is designed to manage duty statuses and equipment within the game. This script allows users to toggle their on-duty status with a simple `/duty` command, automatically integrating this status into the **Imperial911** script. It also equips users with predefined weapons configured within the script settings, enhancing the gameplay experience for role-play scenarios.
 
 ---
 
 ## Features
 
-- **Duty Status Toggle**: Allows users to switch their on-duty status with a single command, updating their status across the CAD system and relevant scripts.
+- **Duty Status Toggle**: Allows users to switch their on-duty status with a single command, updating their status across relevant scripts.
 - **Automatic Weapon Assignment**: Configures and equips users with weapons specified in the `main.lua` under the shared folder, ready upon entering duty.
 
 ## Commands
@@ -54,7 +54,7 @@ To install the **ImperialDuty** script, follow these detailed steps:
 
 ## Usage Notes
 
-After installation, users can toggle their on-duty status by using the `/duty` command. This command will set their status within the CAD and equip them with the weapons specified in the configuration file. It's important to check and update weapon configurations as needed to fit the server's role-play settings.
+After installation, users can toggle their on-duty status by using the `/duty` command. This command will equip them with the weapons specified in the configuration file. It's important to check and update weapon configurations as needed to fit the server's role-play settings.
 
 ---
 

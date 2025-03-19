@@ -2,20 +2,20 @@ fx_version 'cerulean'
 game 'gta5'
 
 name 'ImperialDuty'
-description 'testing'
-author 'Adams'
-version '1.0.0'
+description 'ImperialCAD Notification and user management for on-duty units.'
+author 'Imperial Solutions'
+version '2.0.0'
 
 shared_scripts {
-    'shared/*.lua'
+    'CONFIG.lua'
 }
 
 client_scripts {
-    'client/*.lua'
+    'main/CL.lua'
 }
 
 server_scripts {
-    'server/main.lua'
+    'main/SV.lua'
 }
 
 server_export 'GetOnDutyUnits'

@@ -13,7 +13,7 @@ The **ImperialDuty** script is designed to manage duty statuses and equipment wi
 
 | Command   | Description                                                                          |
 |-----------|--------------------------------------------------------------------------------------|
-| `/duty`   | Toggles the user’s duty status and equips them with predefined weapons.              |
+| `/duty <job>`   | Will add the relevant user to a respective tablet, assinging weapons, blips, and sending a webhhok.  |
 
 ---
 

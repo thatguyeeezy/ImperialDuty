@@ -25,8 +25,8 @@ RegisterCommand("duty", function(source, args)
         
         for _, weapon in ipairs(weapons) do
             RemoveWeaponFromPed(PlayerPedId(), GetHashKey(weapon))
-            weapons = {} or nil
         end
+        weapons = {} or nil
 
     else
         if job == nil then
@@ -56,6 +56,8 @@ RegisterCommand("duty", function(source, args)
 end, false)
 
 local blips = {}
+
+if Config.Showblips then -- Pre much takes away blip logic if not set to true
 
 RegisterNetEvent("Imperial:ShowBlip")
 AddEventHandler("Imperial:ShowBlip", function(serverId, job)
@@ -105,6 +107,7 @@ AddEventHandler("Imperial:SyncBlips", function(serverId, coords, job)
     end
 end)
 
+end
 
 function ShowNotification(message, job)  
     BeginTextCommandThefeedPost("STRING")

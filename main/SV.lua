@@ -19,7 +19,7 @@ AddEventHandler("Imperial:AddUnitOnDuty", function(job)
         jobName = "Fire/Medical"
     end
 
-    TriggerClientEvent("Imperial:ShowBlip", -1, serverId, job)
+    if Config.Showblips then TriggerClientEvent("Imperial:ShowBlip", -1, serverId, job) end
 
     if sendWebhook then
         local playerName = GetPlayerName(serverId)
@@ -79,7 +79,7 @@ AddEventHandler("Imperial:RemoveUnitOnDuty", function(job)
         end
     end
 
-    TriggerClientEvent("Imperial:RemoveBlip", -1, serverId)
+    if Config.Showblips then TriggerClientEvent("Imperial:RemoveBlip", -1, serverId) end
 
     if sendWebhook then
         local playerName = GetPlayerName(serverId)
@@ -109,6 +109,7 @@ AddEventHandler("Imperial:RemoveUnitOnDuty", function(job)
     print("Removed from OnDuty Units: " .. GetPlayerName(serverId))
 end)
 
+if Config.Showblips then 
 RegisterNetEvent("Imperial:UpdateBlip")
 AddEventHandler("Imperial:UpdateBlip", function(coords)
     local serverId = source
@@ -133,6 +134,7 @@ AddEventHandler("Imperial:UpdateBlip", function(coords)
         TriggerClientEvent("Imperial:SyncBlips", -1, serverId, coords, jobType)
     end
 end)
+end
 
 RegisterNetEvent("playerDropped")
 AddEventHandler("playerDropped", function(reason)
@@ -167,7 +169,7 @@ AddEventHandler("playerDropped", function(reason)
         end
     end
 
-    TriggerClientEvent("Imperial:RemoveBlip", -1, serverId)
+    if Config.Showblips then TriggerClientEvent("Imperial:RemoveBlip", -1, serverId) end
     print("[ImperialDuty] Player " .. serverId .. " disconnected. Removed from duty: " .. jobName)
 
     if sendWebhook and jobType then
